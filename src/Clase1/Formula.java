@@ -11,6 +11,11 @@ public class Formula {
 
         System.out.print("Dame el valor de (a): ");
         byte a = in.nextByte();
+        if (a == 0) {
+            System.out.println("El valor de la variable (a) no es"
+                + "valido. Fin del programa");
+            return;
+        }
         System.out.print("Dame el valor de (b): ");
         byte b = in.nextByte();
         System.out.print("Dame el valor de (c): ");
@@ -19,11 +24,6 @@ public class Formula {
         byte d = in.nextByte();
         in.close();
 
-        if (a == 0) {
-            System.out.println("El valor de la variable (a) no es"
-                + "valido. Fin del programa");
-            return;
-        }
         System.out.println("El resultado de la formula es: "
             + (((a + b) / 2) * (c * d / a) + 1));
     }
