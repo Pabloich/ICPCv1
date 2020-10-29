@@ -1,0 +1,17 @@
+n1 -> numero uno
+n2 -> numero dos
+
+cuenta = 0
+
+while(n1 && n2):
+
+    acarrea = (n1 % 10 + n2 % 10) >= 10
+    cuenta += (acarrea) ? 1 : 0
+
+    n1 /= 10
+    n2 /= 10
+
+if(acarrea && (n1 % 10 == 9 || n2 % 10 == 9)):
+    cuenta++
+
+return cuenta;

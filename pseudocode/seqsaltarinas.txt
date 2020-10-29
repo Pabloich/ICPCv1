@@ -1,0 +1,20 @@
+n -> Numero de datos
+seq -> Secuencia
+
+alojar steps[n - 1]
+
+for i <- desde 0 hasta n - 1:
+
+    step <- abs(seq[i] - seq[i + 1])
+
+    if step > n || steps[step] == true:
+        return "No saltarina";
+    else:
+        steps[step] <- true
+
+// steps.cardinality() == n - 1
+for i <- desde 0 hasta n - 2:
+    if steps[i] == false:
+        return "No saltarina"
+
+return "Saltarina"
