@@ -6,7 +6,7 @@ package Clase1;
 public class Acarreo {
 
     public static void main(String[] args) {
-        System.out.println(acarreo(99, 599));
+        System.out.println(acarreo(99, 9991));
     }
 
     private static int acarreo(int n1, int n2) {
@@ -21,9 +21,15 @@ public class Acarreo {
             n2 /= 10;
         }
 
-        if (acarrea > 0 && (n1 % 10 == 9 || n2 % 10 == 9)) {
-            cuenta++;
+        while (acarrea != 0) {
+            if (n1 % 10 == 9 || n2 % 10 == 9)
+                cuenta++;
+            else acarrea = 0;
+
+            n1 /= 10;
+            n2 /= 10;
         }
+
 
         return cuenta;
     }
