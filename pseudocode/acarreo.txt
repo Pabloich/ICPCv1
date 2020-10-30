@@ -5,7 +5,7 @@ cuenta = 0
 
 while(n1 && n2):
 
-    acarrea = (n1 % 10 + n2 % 10) >= 10
+    acarrea = (acarrea + n1 % 10 + n2 % 10) >= 10
     cuenta += (acarrea) ? 1 : 0
 
     n1 /= 10
