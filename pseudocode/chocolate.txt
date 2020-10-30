@@ -1,0 +1,8 @@
+n -> filas
+m -> columnas
+
+// Corte "multiple"
+return (n + m - 2)
+
+// Corte "unico"
+return (n * m - 1)
