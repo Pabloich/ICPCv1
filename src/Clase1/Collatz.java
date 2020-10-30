@@ -15,7 +15,7 @@ public class Collatz {
     }
 
     private static int collatz(int min, int max) {
-        ciclos = new HashMap();
+        ciclos = new HashMap<Integer, Integer>();
         int maximo = 0;
 
         for (int i = min; i < max; i++) {

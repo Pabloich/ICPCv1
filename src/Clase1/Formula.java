@@ -14,6 +14,7 @@ public class Formula {
         if (a == 0) {
             System.out.println("El valor de la variable (a) no es"
                 + "valido. Fin del programa");
+            in.close();
             return;
         }
         System.out.print("Dame el valor de (b): ");
