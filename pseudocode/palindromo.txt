@@ -1,0 +1,13 @@
+palabra -> String de entrada
+
+palabra.replaceAll(" ", "")
+palabra.replaceAll("á", "a")
+palabra.replaceAll("é", "e")
+palabra.replaceAll("í", "i")
+palabra.replaceAll("ó", "o")
+palabra.replaceAll("ú", "u")
+
+for (i = 0; i < palabra / 2; ++i):
+    if (palabra[i] != palabra[len(palabra) - i]):
+        return false
+return true;
