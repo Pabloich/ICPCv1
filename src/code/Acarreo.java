@@ -1,4 +1,4 @@
-package Clase1;
+package code;
 
 /**
  * Acarreo
