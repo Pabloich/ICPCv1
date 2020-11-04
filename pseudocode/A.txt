@@ -1,0 +1,45 @@
+n -> numero de productos
+q -> numero de consultas
+
+preference[n][n]
+maxi, maxj = 0, 0
+
+for (i = 0; i < q; ++i) {
+    operation <- input()
+    if (operation == 'R') {
+        i <- input()
+        j <- input()
+
+        ++preference[i][j]
+        if (preference[i][j] > preference[maxi][maxj]) {
+            maxi, maxj = i, j
+        }
+    } else if (operation == 'Q') {
+        i <- input()
+        maxj = max(preference[i])
+
+        if (maxj == 0) print('No info')
+        else if (count(arr[i][maxj], arr) > 1) print('Multiple')
+        else print(maxj)
+    } else {
+        print(i, j)
+    }
+}
+
+=================================
+max(arr) {
+    int maxi = 0;
+    for (int i = 0; i < len(arr); ++i) {
+        if (arr[n] > arr[maxi]) maxi = i;
+    }
+    return i
+}
+
+count(num, arr) {
+    count = 0
+
+    for (int n : arr) {
+        if (num == n) ++count;
+    }
+    return count
+}
