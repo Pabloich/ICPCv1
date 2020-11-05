@@ -1,0 +1,44 @@
+class Node:
+    int value
+    int childs
+    int swaps = INF
+
+    Node leftChild, rightChild
+
+BinaryTree:
+    Node root
+
+    int add(Node node, Node base = root, swaps = 0):
+        if (base == null) {
+            base = node
+            base.swaps = min(swaps, base.swaps)
+            return swaps
+        }
+        else if (node.value < base.value) {
+            add(node, base.leftChild, base.childs + 1)
+        } else {
+            ++base.childs
+            add(node, base.rightChild, swaps)
+        }
+
+====================================================================
+n <- personas
+estacion <- estacion de bajada
+
+count = 0
+for (int i = 0; i < len(estacion); ++i) {
+    tree = BinaryTreee
+    count += tree.add(estacion[i])
+}
+print(count)
+
+for (int i = 0; i < len(estacion); ++i) {
+    estacion[i].childs = 0;
+}
+
+count = 0
+for (int i = len(estacion) - 1; i >= 0; --i) {
+    tree = BinaryTreee
+    count += tree.add(estacion[i])
+}
+print(count)

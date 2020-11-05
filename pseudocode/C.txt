@@ -1,0 +1,19 @@
+n <- pares de palabras
+
+pares = dict(n)
+for (int i = 0; i < n; ++i) {
+    first <- input()
+    second <- input()
+
+    if (len(first) > len(second) || first < second)
+        first, second = second, first
+    pares.put(first, second)
+}
+
+sentence <- input()
+palabras = sentence.split(' ')
+for (int i = 0; i < len(palabras); ++i) {
+    while(pares.containsKey(palabras[i]))
+        palabras[i] = pares.get(palabras[i])
+    print(palabras[i] + (i < len(palabras) - 1) ? " " : "")
+}
